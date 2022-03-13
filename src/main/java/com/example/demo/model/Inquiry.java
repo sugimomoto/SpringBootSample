@@ -1,16 +1,13 @@
 package com.example.demo.model;
 
-import javax.validation.constraints.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
 public class Inquiry {
-    
+
     @NotBlank
-    @Size(max = 60)
+    @Size(max = 10)
     private String name;
 
     @NotBlank
@@ -21,4 +18,28 @@ public class Inquiry {
     @NotBlank
     @Size(max = 500)
     private String content;
+
+    public String getName() {
+        return name;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

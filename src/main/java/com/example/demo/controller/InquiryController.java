@@ -21,6 +21,7 @@ public class InquiryController {
 
     @PostMapping("/inquiry")
     public String confirm(@Validated @ModelAttribute Inquiry inquiry, BindingResult result){
+
         if(result.hasErrors()){
             return "inquiry";
         }        
