@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
     <title>Validation Test Form</title>
 </head>
 
@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <h4 class="border-bottom my-3" th:text="#{inquiry}"></h4>
+                <h4 class="border-bottom my-3" th:text="#{content}"></h4>
 
                 <form th:action="@{/inquiry}" th:object="${inquiry}" method="post" novalidae>
                     <div class="mb-3">
@@ -28,7 +28,7 @@
 
                     <div class="mb-3">
                         <label for="content" th:text="#{content}" ></label>
-                        <textarea class="form-control" rows="3" th:errorclass="is-invalid" th:field="*{content}">
+                        <textarea class="form-control" rows="3" th:errorclass="is-invalid" th:field="*{content}"></textarea>
                         <div class="invalid-feedback" th:errors="*{content}"></div>
                     </div>
 
