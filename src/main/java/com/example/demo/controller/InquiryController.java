@@ -14,12 +14,12 @@ import com.example.demo.model.Inquiry;
 @Controller
 public class InquiryController {
     
-    @GetMapping("/inquiry")
+    @GetMapping("/")
     public String index(@ModelAttribute Inquiry inquiry){
         return "inquiry";
     }
 
-    @PostMapping("/inquiry")
+    @PostMapping("/")
     public String confirm(@Validated @ModelAttribute Inquiry inquiry, BindingResult result){
 
         if(result.hasErrors()){
